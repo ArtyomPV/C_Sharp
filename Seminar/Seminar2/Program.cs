@@ -6,7 +6,7 @@
 сумма положительных чисел равна 29, сумма отрицательных равна -20.
 */
 
-int create (int size, int minValue, int maxValue){
+int[] CreateArray (int size, int minValue, int maxValue){
     int[] array = new int[size];
     for (int i = 0; i < size; i++)
     {
@@ -16,12 +16,12 @@ int create (int size, int minValue, int maxValue){
     return array;
 }
 
-void Showarray(int[] array){
+void ShowArray(int[] array){
     for (int i = 0; i < array.Length; i++)
     {
-        Console.Write($"{array[i]}");
+        Console.Write($"{array[i]} ");
     }
-    Console.WrineLine();
+    Console.WriteLine();
 }
 
 int FindPosSumm(int[] array){
@@ -42,10 +42,10 @@ int FindNegSumm(int[] array){
     return summ;
 }
 
-int size = 0;
+int size = 5;
 int min = -9;
 int max = 9;
-int [] array = CreateArray(size, min, max);
+int[] array = CreateArray(size, min, max);
 ShowArray(array);
 Console.WriteLine($"Summ of positive numbers is {FindPosSumm(array)}");
-Console.WriteLine($"Summ of negative numbers is {FindPosSumm(array)}");
+Console.WriteLine($"Summ of negative numbers is {FindNegSumm(array)}");
